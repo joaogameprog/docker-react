@@ -1,0 +1,16 @@
+docker build -f Dockerfile.dev .
+docker run -it -p 3000:3000 CONTAINER_ID
+docker run -it -p 3000:3000 CONTAINER_ID npm run test
+
+pwd
+
+winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app CONTAINER_ID
+
+docker-compose down && docker-compose up --build
+
+docker run -it 
+
+docker run -it joaogameprog/frontend npm run test
+
+docker exec -it 0ab34ae59633 npm run test
+
